@@ -1,0 +1,35 @@
+<div id="menu_options">
+    <!-- div class="name1" style="float:right; margin-right:23px; margin-top:5px;">
+        <img src="/images/online_icon.png"> Logged Into App
+    </div -->
+    <div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px; height:350px;" class="home_box">
+	    <%@doctor_list.each do |doctor|%>
+        <div>
+            <table width="98%" cellspacing="3" cellpadding="0" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td width="60%" class="name1">
+                            <%=doctor.name%> <%= " , " + doctor.doctor_professional_profile.degree unless doctor.doctor_professional_profile.nil? %>
+                            <div style="float:right;">
+                                <img src="/images/online_icon.png">
+                            </div>
+                        </td>
+                        <td width="35%">
+                            
+							<%=link_to image_tag('send_msg_btn.jpg'),:controller => "home",:action => "send_message_from_quick_contact",:id => doctor.id%> 
+							<%=link_to image_tag('view_profile_btn.jpg'),:controller => "home",:action => "view_profile",:doc_id => doctor.id%>
+							
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="line_home_box">
+        </div>
+		<%end%>
+    </div>
+</div>
+<div class="main_box">
+    <%=render :partial => "inbox_message" %>
+    <%=render :partial => "outbox_message" %>
+</div>

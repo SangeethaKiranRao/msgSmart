@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/messages
+END
+view_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/app/views/messages/view_message.html.erb
+END
+_check_pin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/msgSmart/!svn/ver/13/trunk/msgSmart/app/views/messages/_check_pin.html.erb
+END
+secure_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/app/views/messages/secure_email.html.erb
+END

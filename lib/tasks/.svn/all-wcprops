@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/lib/tasks
+END
+specialties.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/lib/tasks/specialties.csv
+END
+load_initial_data.rake
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/lib/tasks/load_initial_data.rake
+END

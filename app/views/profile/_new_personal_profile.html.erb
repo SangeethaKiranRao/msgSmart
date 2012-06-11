@@ -1,0 +1,38 @@
+<% @paths = @edit ? {:controller=> "profile", :action => "update_personal_profile", :doctor_id => @doctor.id} : {:controller=> "profile", :action => "create_personal_profile", :doctor_id => @doctor.id} %>
+<% form_for @doctor_personal_profile, :doctor_personal_profile, :url => @paths, :html => { :multipart => true } do |f| -%>
+<%= f.error_messages %>
+<%=f.hidden_field :doctor_id,:value => @doctor.id%>
+<div class="box_text2">
+        <div class="name">
+            Interests
+        </div>
+        <div class="nameValue2">
+            <%= f.text_field :interests %>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Languages
+        </div>
+        <div class="nameValue2">
+            <%= f.text_field :languages %>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Profile Pic
+        </div>
+        <div class="nameValue2">
+        	<%= @doctor_personal_profile.new_record? ? image_tag("/images/foto.jpg", :alt => "no profile image") : (image_tag @doctor_personal_profile.avatar.url(:small)) %>
+    	    <%= f.file_field :avatar, :class => "profileFileUpload", :size => "24" %>
+            
+        </div>
+    </div>
+    <div class="box_text2">
+        <div>
+        	<%img = @edit ? "update_btn.jpg" : "submit_btn.jpg"%>
+			<%= image_submit_tag(img,:style => "float:right; margin-right:20px; margin-top:3px;") %>
+            
+        </div>
+    </div>
+	<%end%>

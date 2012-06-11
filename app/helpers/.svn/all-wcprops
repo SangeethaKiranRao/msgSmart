@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/application_helper.rb
+END
+sessions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/sessions_helper.rb
+END
+messages_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/messages_helper.rb
+END
+mobile_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/mobile_helper.rb
+END
+home_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/home_helper.rb
+END
+doctors_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/doctors_helper.rb
+END
+profile_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/helpers/profile_helper.rb
+END

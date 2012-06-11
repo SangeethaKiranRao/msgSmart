@@ -1,0 +1,29 @@
+<h2>Personal</h2>
+<table width="95%" cellspacing="3" cellpadding="0" border="0" align="center">
+    <tbody>
+        <tr>
+            <td height="20" width="23%" class="name1">
+                Interests:
+            </td>
+            <td width="77%" align="left" class="name1">
+                <%=h @view_doctor.doctor_personal_profile.interests if @view_doctor.doctor_personal_profile%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Languages:
+            </td>
+            <td class="name1">
+                <%=h @view_doctor.doctor_personal_profile.languages if @view_doctor.doctor_personal_profile%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                &nbsp;
+            </td>
+            <td align="left">
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

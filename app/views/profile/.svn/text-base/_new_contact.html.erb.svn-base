@@ -1,0 +1,162 @@
+<% @paths = @edit ? {:controller=> "profile", :action => "update_contact_info_profile", :doctor_id => @doctor.id} : {:controller=> "profile", :action => "create_contact_info_profile", :doctor_id => @doctor.id} %>
+<% form_for @doctor_contact_info, :doctor_contact_info, :url => @paths do |f| -%>
+<%= f.error_messages %>
+<%=f.hidden_field :doctor_id,:value => @doctor.id%>
+<%=hidden_field "doctor_contact_share","doctor_id",:value => @doctor.id%>
+<%=hidden_field "hospital_contact_share","doctor_id",:value => @doctor.id%>
+<%=hidden_field "public_contact_share","doctor_id",:value => @doctor.id%>
+<div style="padding-top:18px;" class="doc_personalpro">
+    <div class="bar1">
+        <div class="bar1_txt">
+            Public
+        </div>
+        <div class="bar1_txt">
+            Hospital Staff
+        </div>
+        <div class="bar1_txt">
+            Doctor
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Mobile *
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :mobile_number,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[mobile]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[mobile]",true,false )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[mobile]",true,false )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Pager
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :pager,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[pager]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[pager]",true,true )%>
+		</div>	
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[pager]",true,false )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Office No
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :office_number,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[office_number]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+           <%= check_box_tag("hospital_contact_share[office_number]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[office_number]",true,true )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Back Line No
+        </div>
+        <div class="nameValue2" style="width:172px">
+           <%= f.text_field :back_line_number,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[back_line_number]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[back_line_number]",true,false )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[back_line_number]",true,false )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Assistant No
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :assistant_number,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[assistant_number]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[assistant_number]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[assistant_number]",true,false )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Work Email *
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :work_email,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[work_email]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[work_email]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[work_email]",true,false )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Office Email
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :office_email,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[office_email]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[office_email]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[office_email]",true,true )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Personal Email
+        </div>
+        <div class="nameValue2" style="width:172px">
+            <%= f.text_field :personal_email,:size => "17" %>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag("doctor_contact_share[personal_email]",true,true )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag("hospital_contact_share[personal_email]",true,false )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag("public_contact_share[personal_email]",true,false )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div>
+            <%= image_submit_tag("submit_btn.jpg",:style => "float:right; margin-right:20px; margin-top:3px;") %>
+        </div>
+    </div>
+</div>
+<%end%>

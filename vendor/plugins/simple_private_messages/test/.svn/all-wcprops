@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/test
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/test/test_helper.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/test/schema.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/test/database.yml
+END

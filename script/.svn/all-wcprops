@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script
+END
+dbconsole
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/dbconsole
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/generate
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/plugin
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/console
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/script/server
+END

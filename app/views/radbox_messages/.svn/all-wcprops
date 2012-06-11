@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/radbox_messages
+END
+inbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/radbox_messages/inbox.html.erb
+END
+outbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/radbox_messages/outbox.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/radbox_messages/show.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/radbox_messages/new.html.erb
+END

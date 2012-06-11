@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates
+END
+view_index_inbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates/view_index_inbox.html.erb
+END
+view_index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates/view_index.html.erb
+END
+view_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates/view_new.html.erb
+END
+view_index_sent.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates/view_index_sent.html.erb
+END
+view_show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates/view_show.html.erb
+END
+controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/generators/private_message_scaffold/templates/controller.rb
+END

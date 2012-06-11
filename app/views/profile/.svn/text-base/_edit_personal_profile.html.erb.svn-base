@@ -1,0 +1,32 @@
+<div class="box_text2">
+        <div class="name">
+            Interests
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_personal_profile.interests%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Languages
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_personal_profile.languages%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Profile Pic
+        </div>
+        <div class="nameValue2">
+            <%= image_tag (@doctor_personal_profile.avatar.url(:small))%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div>
+            <%= link_to_remote image_tag('edit.jpg'),
+							:url => {:controller => "profile", :action => 'edit_personal_profile', :doctor_id=> @doctor.id},
+							:update => 'personal_profile',:html => {:class => 'edit_profile'} %>
+            
+		</div>
+    </div>

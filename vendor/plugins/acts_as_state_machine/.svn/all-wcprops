@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine/Rakefile
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine/TODO
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine/init.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine/CHANGELOG
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_state_machine/MIT-LICENSE
+END

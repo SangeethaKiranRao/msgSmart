@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures
+END
+hospitals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/hospitals.yml
+END
+doctor_medical_groups.yml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/doctor_medical_groups.yml
+END
+doctor_specialities.yml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/doctor_specialities.yml
+END
+doctors.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/doctors.yml
+END
+medical_groups.yml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/medical_groups.yml
+END
+pictures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/pictures.yml
+END
+specialities.yml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/specialities.yml
+END
+nurses.yml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/nurses.yml
+END
+doctor_hospitals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/doctor_hospitals.yml
+END
+doctor_professional_profiles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/fixtures/doctor_professional_profiles.yml
+END

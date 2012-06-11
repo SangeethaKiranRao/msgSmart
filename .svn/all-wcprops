@@ -1,0 +1,21 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 23
+/svn/msgSmart/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/Rakefile
+END

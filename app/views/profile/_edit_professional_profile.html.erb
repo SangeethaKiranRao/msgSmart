@@ -1,0 +1,129 @@
+<%=render :partial => "speciality" %>
+<%=render :partial => "medical_group" %>
+<%=render :partial => "hospital" %>
+
+<div class="hrline" style="margin-top:13px;">
+</div>
+
+<div class="box_text2">
+    <div class="name">
+        First Name
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.first_name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Middle Name
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.middle_name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Last Name
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.last_name %>
+    </div>
+</div>
+
+<div class="box_text2">
+    <div class="name">
+        Sub Speciality
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.sub_speciality %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Office Address
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.office_address %>
+    </div>
+</div>
+<div class="box_text2" style="margin-top:17px;">
+    <div class="name">
+        State
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.state %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Zip Code
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.zip_code %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Assistant Name
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.assistant_name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Website Url
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.web_url %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Medical School
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.medical_school %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Graduation Year
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.graduation_year %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Degree
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.degree %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Secure Pin
+    </div>
+    <div class="box_text">
+        <%=h @doctor_professional_profile.secure_pin %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Use Secure Pin
+    </div>
+    <div class="box_check">
+        <%= check_box_tag("doctor_professional_profile[use_secure_pin]", true, @doctor_professional_profile.use_secure_pin, :disabled => true )%>
+    </div>
+</div>
+
+<div class="box_text2">
+    <div>
+        <%= link_to_remote image_tag('edit.jpg'),
+							:url => {:controller => "profile", :action => 'edit_professional_profile', :doctor_id=> @doctor.id},
+							:update => 'professional_profile',:html => {:class => 'edit_profile'} %>
+        
+    </div>
+</div>

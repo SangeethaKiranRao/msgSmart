@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/README.rdoc
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/init.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/simple_private_messages/MIT-LICENSE
+END

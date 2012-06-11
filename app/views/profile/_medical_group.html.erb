@@ -1,0 +1,31 @@
+<div class="doc_personalpro" style="margin-left:-1px">
+    <div class="box_border1">
+        <div class="doc_professional_head">
+            <div class="left">
+                <img src="/images/medical_group.jpg" />
+            </div>
+            <div class="pro_speciality">
+                &nbsp;Medical Group
+            </div>
+        </div>
+    </div>
+	<%unless @doctor_medical_groups.empty?%>
+    <div class="profe_text1">
+        <ul id="medical_sort">
+            <% @doctor_medical_groups.each do |medical_group| %>
+       	<li id="medical_<%= medical_group.id %>" class="handle">
+			<%= medical_group.name %>
+			<span class="profe_right">
+				<%= link_to image_tag('/images/cross.png', :border =>0), {:action => "delete_doctor_medical", :doctor_id => @doctor.id, :medical_group_id => medical_group.id}, {:method => "delete", :confirm => "Are you sure to delete this Speciality?", :style => "text-align:right;"} %>
+			</span>
+		</li>
+	<% end %>
+        </ul>
+		<%= sortable_element("medical_sort", :url => {:action => "sort_medical"}) %>
+    </div>
+	<%else%>
+	<%end%>
+    <div class="redtext1a_red_right">
+        <%= link_to_remote_redbox "+ Add New Medical Group", :url => {:controller => "profile", :action => "new_medical_group", :doctor_id => @doctor.id} %>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile
+END
+pediatrics_speciality_list.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/pediatrics_speciality_list.xml.builder
+END
+add_to_chat.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/add_to_chat.xml.builder
+END
+adult_speciality_list.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/adult_speciality_list.xml.builder
+END
+doctor_names.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/doctor_names.xml.builder
+END
+message_conversation.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/message_conversation.xml.builder
+END
+fetch_radbox_messages.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/fetch_radbox_messages.xml.builder
+END
+sent_messages.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/sent_messages.xml.builder
+END
+quick_contact_list.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/quick_contact_list.xml.builder
+END
+doctor_medical_group.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/doctor_medical_group.xml.builder
+END
+inbox_messages.xml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/mobile/inbox_messages.xml.builder
+END

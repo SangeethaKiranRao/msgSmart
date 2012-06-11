@@ -1,0 +1,13 @@
+<% form_tag(:controller => "home", :action => "medical_staff_search") do -%>
+<div id="menu_options">
+        <div class="textbox_outer">
+            <div style="float:left;">
+                <%=  select_tag('medical_group_id', options_for_select(medical_groups.collect{ |m| [m.name, m.id] }, medical_group_id.to_i), :class => "specialty_dd_class") %>
+            </div>
+            <div style="float:right;">
+                <%=  image_submit_tag('search_btn.jpg') %>
+            </div>
+            <%=hidden_field_tag "search_type", "medical_group" %>
+        </div>
+</div>
+<% end %>

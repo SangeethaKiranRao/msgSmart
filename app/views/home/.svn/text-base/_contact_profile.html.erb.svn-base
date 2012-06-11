@@ -1,0 +1,77 @@
+<h2>Contact</h2>
+<table width="95%" cellspacing="3" cellpadding="0" border="0" align="center">
+    <tbody>
+        <tr>
+            <td height="20" width="23%" class="name1">
+                Mobile:
+            </td>
+            <td width="77%" align="left" class="name1">
+               <%=h @view_doctor.doctor_contact_share.mobile? ? @view_doctor.doctor_contact_info.mobile_number : ""%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Pager:
+            </td>
+            <td class="name1">
+                <%=h @view_doctor.doctor_contact_share.pager? ? @view_doctor.doctor_contact_info.pager : ""%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Office #:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_contact_share.mobile? ? @view_doctor.doctor_contact_info.office_number : ""%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Back line #:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_contact_share.back_line_number? ? @view_doctor.doctor_contact_info.back_line_number : ""%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Assistant #:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_contact_share.assistant_number? ? @view_doctor.doctor_contact_info.assistant_number : ""%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Assistant Name:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_contact_info.assistant_name%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Work Email:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_contact_info.work_email%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Office Email:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_contact_info.office_email%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                &nbsp;
+            </td>
+            <td align="left">
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

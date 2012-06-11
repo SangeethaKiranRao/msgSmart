@@ -1,0 +1,324 @@
+class HomeController < ApplicationController
+      layout "application"
+  def index
+      @doctor = Doctor.find(params[:doctor_id])
+      @doctor_list = Doctor.find(:all,:limit => 10)
+  end
+  
+  def medical_staff_search
+      @doctor = Doctor.find(params[:doctor_id])
+     # render :partial => "medical_staff_search"
+       render :action => "medical_staff_search"
+  end
+  
+  def compose_message
+      flash[:notice] = ""
+      @doctor = Doctor.find(params[:doctor_id])
+  end
+  
+  def send_message_from_quick_contact
+    @doctor = current_doctor
+    @send_doctor = Doctor.find(params[:id])
+    render :action => "compose_message"
+  end
+
+  def view_profile
+    @view_doctor = Doctor.find(params[:doc_id])
+  end
+
+  def view_full_profile
+      @view_doctor = Doctor.find(params[:doc_id])
+  end
+
+  def professional_profile
+    @view_doctor = Doctor.find(params[:doc_id])
+    render :partial => 'professional_profile'
+  end
+ 
+ def contact_profile
+   @view_doctor = Doctor.find(params[:doc_id])
+   render :partial => 'contact_profile'
+ end
+
+ def insurance_profile
+   @view_doctor = Doctor.find(params[:doc_id])
+   render :partial => 'insurance_profile'
+ end
+ 
+ def personal_profile
+   @view_doctor = Doctor.find(params[:doc_id])
+   render :partial => 'personal_profile'
+ end
+
+
+  def create
+     
+         @doctor = current_doctor
+         if params[:message].blank?
+            @subject = params[:mail][:subject]
+            @body = params[:mail][:body]
+            flash[:notice] = "Please enter To address"
+            render :action => "compose_message"
+         else
+           doctors = Doctor.find_all_by_email(params[:message][:to])
+            m = current_doctor.send_message(doctors,params[:mail][:subject],params[:mail][:body])
+            msg = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,current_doctor.id])
+            msg.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join )) if msg
+            msg.save if msg
+            doctors.each do |doc|
+            mail = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,doc.id])
+            mail.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join ))
+            mail.save 
+          if params[:send_type][:phone] == "true"
+             if doc.mobile_register == "yes"
+               logger.info("----message send to mobile app-----")
+             else
+               if doc.doctor_contact_info
+              # sms = SMS.new(CLICKATELL_CONFIG)
+               text = Message.sms_text(mail)
+              # sms.create(doc.doctor_contact_info.mobile_number,text)
+                logger.info("-----------send link to sms---------")
+                logger.info("----text---#{text}------")
+               @send_sms = true
+               end
+           end
+           end
+          if params[:send_type][:work_email] == "true"
+            DoctorMailer.deliver_send_secure_link(doc,mail)
+          end  
+         if params[:send_type][:secure_text] == "true"
+        #send sms to mobile number
+        if doc.doctor_contact_info
+       # sms = SMS.new(CLICKATELL_CONFIG) unless @send_sms
+       # text = Message.sms_text(mail) unless @send_sms
+       # sms.create(doc.doctor_contact_info.mobile_number,text) unless @send_sms
+       logger.info("***************send link to sms***********") unless @send_sms
+     end
+     
+      end
+      
+      end
+      redirect_to :action => "inbox_messages"
+      end
+    end  
+  
+  def inbox_messages
+      if !current_doctor.mailbox[:inbox].mail.empty?
+      @inbox_messages = current_doctor.mailbox[:inbox].mail.paginate(:page => params[:page], :per_page => 14)
+      else
+      @inbox_messages = ""
+      end  
+  end
+  
+  def message_details
+    @inbox = true if params[:inbox]
+    @mail = Mail.find(params[:id])
+    @mail.read = true
+    @mail.save
+    
+  end
+  
+  def sent_messages
+     if !current_doctor.mailbox[:sentbox].mail.empty? 
+    @sent_messages = current_doctor.mailbox[:sentbox].mail.paginate(:page => params[:page], :per_page => 14)
+     else
+     @sent_messages = ""
+     end
+  end
+  
+  def trash_messages
+      if !current_doctor.mailbox[:trash].mail.empty? 
+    @trash_messages = current_doctor.mailbox[:trash].mail.paginate(:page => params[:page], :per_page => 14)
+      else
+      @trash_messages = ""
+      end
+  end
+  
+  def reply_to_sender
+      if logged_in?
+      @mail = Mail.find(params[:mail_id])
+      @message = @mail.message
+      @sender = true
+    else
+      session[:return_to] = request.request_uri
+      redirect_to :controller => "doctors", :action => "new"
+    end  
+  end
+  
+  def reply_to_message
+      mail = Mail.find(params[:id])
+      doctors = Doctor.find_all_by_email(params[:message][:to])
+     m = current_doctor.reply_to_sender(mail,params[:message][:body],params[:message][:subject])
+     msg = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,current_doctor.id])
+     msg.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join )) if msg
+     msg.save if msg
+      doctors.each do |doc|
+      mail = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,doc.id])
+      mail.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join ))
+      mail.save
+      if params[:send_type][:phone] == "true"
+             if doc.mobile_register == "yes"
+               logger.info("----message send to mobile app-----")
+             else
+               if doc.doctor_contact_info
+              # sms = SMS.new(CLICKATELL_CONFIG)
+               text = Message.sms_text(mail)
+              # sms.create(doc.doctor_contact_info.mobile_number,text)
+                logger.info("-----------send link to sms---------")
+                logger.info("----text---#{text}------")
+               @send_sms = true
+               end
+       end
+     end
+     if params[:send_type][:work_email] == "true"
+        DoctorMailer.deliver_send_secure_link(doc,mail)
+     end  
+     if params[:send_type][:secure_text] == "true"
+        #send sms to mobile number
+        if doc.doctor_contact_info
+       # sms = SMS.new(CLICKATELL_CONFIG) unless @send_sms
+       # text = Message.sms_text(mail) unless @send_sms
+       # sms.create(doc.doctor_contact_info.mobile_number,text) unless @send_sms
+       logger.info("***************send link to sms***********") unless @send_sms
+        end
+     end
+     end
+      redirect_to :action => "inbox_messages"
+  end
+  
+  def reply_to_all
+    @mail = Mail.find(params[:mail_id])
+    @message = @mail.message
+    @recipients = @message.recipients.map(&:email) - [current_doctor.email] + [@message.sender.email]
+    @all = true
+    render :action => "reply_to_sender"
+  end
+  
+  def reply_to_all_message
+    mail = Mail.find(params[:id])
+    doctors = Doctor.find_all_by_email(params[:message][:to])
+    m = current_doctor.reply_to_all(mail,params[:message][:body],params[:message][:subject])
+    msg = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,current_doctor.id])
+    msg.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join )) if msg
+    msg.save if msg
+    doctors.each do |doc|
+    mail = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,doc.id])
+    mail.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join ))
+    mail.save
+    if params[:send_type][:phone] == "true"
+             if doc.mobile_register == "yes"
+               logger.info("----message send to mobile app-----")
+             else
+               if doc.doctor_contact_info
+              # sms = SMS.new(CLICKATELL_CONFIG)
+               text = Message.sms_text(mail)
+              # sms.create(doc.doctor_contact_info.mobile_number,text)
+                logger.info("-----------send link to sms---------")
+                logger.info("----text---#{text}------")
+               @send_sms = true
+               end
+           end
+       end
+      if params[:send_type][:work_email] == "true"
+            DoctorMailer.deliver_send_secure_link(doc,mail)
+      end     
+      if params[:send_type][:secure_text] == "true"
+        #send sms to mobile number
+        if doc.doctor_contact_info
+       # sms = SMS.new(CLICKATELL_CONFIG) unless @send_sms
+       # text = Message.sms_text(mail) unless @send_sms
+       # sms.create(doc.doctor_contact_info.mobile_number,text) unless @send_sms
+       logger.info("***************send link to sms***********") unless @send_sms
+        end 
+      end 
+    end      
+    redirect_to :action => "inbox_messages"
+  end
+  
+  def forward_message
+      @mail = Mail.find(params[:mail_id])
+      @message = @mail.message
+      flash[:notice] = ""
+  end
+  
+  def forward_send_message
+       @message = Message.find(params[:id])
+      if params[:message][:to].blank?
+          flash[:notice] = "Please enter To address"
+          render :action => "forward_message"
+      else
+        doctors = Doctor.find_all_by_email(params[:message][:to])
+        m = current_doctor.send_message(doctors,params[:message][:body],params[:message][:subject])
+        msg = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,current_doctor.id])
+        msg.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join )) if msg
+        msg.save if msg   
+        doctors.each do |doc|
+        mail = Mail.find(:first,:conditions => ['message_id in (?) and doctor_id in (?)',m.message_id,doc.id])
+        mail.update_attribute(:encrypt_code, Digest::SHA1.hexdigest(Time.now.to_s.split(//).sort_by {rand}.join ))
+        mail.save
+        if params[:send_type][:phone] == "true"
+             if doc.mobile_register == "yes"
+               logger.info("----message send to mobile app-----")
+             else
+               if doc.doctor_contact_info
+              # sms = SMS.new(CLICKATELL_CONFIG)
+               text = Message.sms_text(mail)
+              # sms.create(doc.doctor_contact_info.mobile_number,text)
+                logger.info("-----------send link to sms---------")
+                logger.info("----text---#{text}------")
+               @send_sms = true
+               end
+           end
+         end
+         if params[:send_type][:work_email] == "true"
+            DoctorMailer.deliver_send_secure_link(doc,mail)
+          end  
+          if params[:send_type][:secure_text] == "true"
+        #send sms to mobile number
+        if doc.doctor_contact_info
+       # sms = SMS.new(CLICKATELL_CONFIG) unless @send_sms
+       # text = Message.sms_text(mail) unless @send_sms
+       # sms.create(doc.doctor_contact_info.mobile_number,text) unless @send_sms
+       logger.info("***************send link to sms***********") unless @send_sms
+        end
+       end 
+        end    
+      redirect_to :action => "inbox_messages"
+      end
+  end
+  
+  def to_trash_message
+    mail = Mail.find(params[:mail_id])
+    mail.trashed = true
+    mail.save
+    redirect_to :action => "inbox_messages"
+  end
+  
+  def to_inbox_message
+    mail = Mail.find(params[:id])
+    mail.trashed = false
+    mail.save
+    redirect_to :action => "trash_messages"
+  end
+  
+   def delete_message
+     mail = Mail.find(params[:id])
+     mail.delete()
+     redirect_to :action => "trash_messages"
+ end
+ 
+ def remove_message
+     unless params[:mail].blank?
+       mail = Mail.find(params[:mail][:message_id])
+       mail.each do |msg|
+         msg.trashed = true
+         msg.save
+       end
+   end
+   action = params[:action][:name]
+   redirect_to :action => action, :doctor_id => current_doctor.id
+ end
+   
+  
+   
+end

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit
+END
+doctor_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/doctor_test.rb
+END
+medical_group_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/medical_group_test.rb
+END
+doctor_hospital_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/doctor_hospital_test.rb
+END
+doctor_professional_profile_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/doctor_professional_profile_test.rb
+END
+doctor_speciality_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/doctor_speciality_test.rb
+END
+doctor_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/doctor_mailer_test.rb
+END
+hospital_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/hospital_test.rb
+END
+doctor_medical_group_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/doctor_medical_group_test.rb
+END
+speciality_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/test/unit/speciality_test.rb
+END

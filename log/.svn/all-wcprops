@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/log
+END
+production.log
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/log/production.log
+END
+server.log
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/log/server.log
+END
+test.log
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/log/test.log
+END
+development.log
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/log/development.log
+END

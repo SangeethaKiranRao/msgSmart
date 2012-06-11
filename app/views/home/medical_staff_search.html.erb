@@ -1,0 +1,20 @@
+<div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px;height:400px;width:520px;" class="home_box">
+
+  <div><%=flash[:notice] if flash[:notice]%></div>
+
+  <% if ["A-F", "G-K", "L-P", "Q-U", "V-Z"].include?(params[:search_type]) %>
+    <%= render :partial => "name_search", :locals => { :search_type => @search_type, :name_search => params[:name_search] } %>
+  <% elsif params[:search_type] == "speciality" %>
+    <%= render :partial => "speciality_search", :locals => { :speciality_options => @speciality_options, :speciality_id => params[:speciality_id] } %>
+  <% else %>
+    <%= render :partial => "medical_group_search", :locals => { :medical_groups => @medical_groups, :medical_group_id => params[:medical_group_id] } %>
+  <% end %>
+
+  <%= render :partial => "search_result", :locals => { :doctors => @doctors }  %>
+</div>
+
+<div class="main_box">
+<%=render :partial => "inbox_message"%>
+<%=render :partial => "outbox_message"%>
+</div>
+

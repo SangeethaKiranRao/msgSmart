@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/config/environment.rb
+END

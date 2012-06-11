@@ -1,0 +1,28 @@
+<% form_for @doctor, :doctor, :url => {:controller=> "profile", :action => "update_basic_profile", :doctor_id => @doctor.id} do |f| -%>
+<%= f.error_messages %>
+<div class="box_text2">
+    <div class="name">
+        <p>Name:</p>
+    </div>
+    <div class="nameValue2">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        <p>E-mail ID:</p>
+    </div>
+    <div class="nameValue2">
+        <%= f.text_field :email %>
+    </div>
+    <div class="profileEdit">
+    	<%= image_submit_tag("update_btn.jpg",:class => 'edit_profile',:onclick => "return check_basic_profile();") %>
+    	<%#= submit_tag 'Update' %>
+    	<%#= link_to_remote image_tag('/images/edit.jpg'),
+							:url => {:controller => "friendship", :action => 'edit_basic_profile', :user_id=> @user.id},
+							:update => 'edit_basic_profile' %>
+    	<%#= link_to_remote (img_tag('/images/edit.jpg')), :url => {:action => 'edit_basic_profile', :user_id=> @user.id }, :update => 'edit_basic_profile' %>
+    </div>
+</div>
+<div class="blankSpace">&nbsp;</div>
+<% end %>

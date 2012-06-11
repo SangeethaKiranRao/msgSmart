@@ -1,0 +1,56 @@
+<div id="menu_options">
+    <!-- div class="name1" style="float:right; margin-right:20px; margin-top:5px;">
+        <img src="/images/online_icon.png"> Logged into App
+    </div -->
+    <div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px;" class="home_box">
+        <div>
+            <table width="98%" cellspacing="3" cellpadding="0" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td width="60%" class="name1">
+                            <%=@view_doctor.name%>, <%=@view_doctor.doctor_professional_profile.degree%> <!-- img src="/images/online_icon.png" -->
+                        </td>
+                        <td width="40%">
+                            <%=link_to image_tag('send_msg_btn.jpg'),:controller => "home",:action => "send_message_from_quick_contact",:id => @view_doctor.id%>
+						</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div id="content_main" class="mid_2">
+                <div class="tabberlive">
+                    <ul class="tabbernav">
+                        <li class="tabberactive" id="prof">
+                           
+							<%= link_to_remote 'Professional',:url => {:controller => 'home', :action => 'professional_profile',:doc_id => @view_doctor.id},:update => 'tab_update',:complete => "TabChange('prof');" %>
+                        </li>
+                        <li class="" id="cont">
+                            <%= link_to_remote 'Contacts',:url => {:controller => 'home', :action => 'contact_profile',:doc_id => @view_doctor.id},:update => 'tab_update',:complete => "TabChange('cont');" %>
+                        </li>
+                        <li class="" id="insur">
+                            <%= link_to_remote 'Insurances',:url => {:controller => 'home', :action => 'insurance_profile',:doc_id => @view_doctor.id},:update => 'tab_update',:complete => "TabChange('insur');" %>
+                        </li>
+                        <li class="" id="perso">
+                            <%= link_to_remote 'Personal',:url => {:controller => 'home', :action => 'personal_profile',:doc_id => @view_doctor.id},:update => 'tab_update',:complete => "TabChange('perso');" %>
+                        </li>
+                    </ul>
+                    <div class="tabbertab " title="" id="tab_update">
+                        <h2>Professional</h2>
+                        <%=render :partial => 'professional_profile'%>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="line_home_box">
+        </div>
+        <div style="width:400px; text-align:left; margin:0px 0px 0px 16px;">
+         <!--   <a class="delete" href="#"><strong>See Full Profile</strong></a> -->	
+        </div>
+    </div>
+</div>
+<div class="main_box">
+    <%=render :partial => "inbox_message" %>
+    <%=render :partial => "outbox_message" %>
+</div>

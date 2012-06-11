@@ -1,0 +1,37 @@
+<div id="menu_options">
+<div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px; height:350px;" class="home_box">
+    <div class="pagination" style="height:25px; float:right; margin-right:10px;">
+        <%= will_paginate @inbox_messages if !@inbox_messages.blank? %>
+    </div>
+    <table width="98%" cellspacing="1" cellpadding="3" border="0" align="center">
+        <tbody>
+            <tr class="name_head">
+                <td bgcolor="#a42323" align="left">
+                    From
+                </td>
+                <td bgcolor="#a42323" align="left">
+                    Subject
+                </td>
+                <td bgcolor="#a42323" align="left">
+                    Received
+                </td>
+            </tr>
+                      <%unless @inbox_messages.blank?%>
+			<%@inbox_messages.each do |msg|%>
+            <tr class="name_row">
+                <td bgcolor="#ededed" align="left">
+                    <%=h msg.message.sender.name%>
+                </td>
+                <td bgcolor="#ededed" align="left">
+                    <%=link_to truncate(msg.message.subject,20,".."),{:controller => "home",:action => "message_details",:id => msg.id,:inbox => true},{:class => "delete"}%>
+                </td>
+                <td bgcolor="#ededed" align="left">
+                    <%=h distance_of_time_in_words(msg.message.created_at, Time.now).sub("about","") %> ago
+                </td>
+            </tr>
+			<%end%>
+            <%end%>  
+        </tbody>
+    </table>
+</div>
+</div>

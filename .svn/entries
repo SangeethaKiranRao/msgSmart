@@ -1,0 +1,132 @@
+10
+
+dir
+3
+http://xp-dev.com/svn/msgSmart/trunk/msgSmart
+http://xp-dev.com/svn/msgSmart
+
+
+
+2012-05-25T10:15:13.126996Z
+3
+SangeethaKiran
+has-props
+has-prop-mods
+
+
+
+
+
+
+
+
+
+
+
+
+7ddd0ce9-5bdd-427d-8dfd-031f6a797ad6
+
+vendor
+dir
+
+README
+file
+
+
+
+
+2012-04-27T06:25:07.000000Z
+a58e68a7599c976f071d5b9c6fa67fb3
+2012-05-25T10:15:13.126996Z
+3
+SangeethaKiran
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10011
+
+public
+dir
+
+test
+dir
+
+app
+dir
+
+tmp
+dir
+
+log
+dir
+
+Rakefile
+file
+
+
+
+
+2012-04-27T06:25:07.000000Z
+17f2f134da4cd31ea095d5868ca89e86
+2012-05-25T10:15:13.126996Z
+3
+SangeethaKiran
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+307
+
+script
+dir
+
+config
+dir
+
+db
+dir
+
+doc
+dir
+
+lib
+dir
+
+nbproject
+dir
+

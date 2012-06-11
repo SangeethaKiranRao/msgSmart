@@ -1,0 +1,42 @@
+<div class="secure_pin_error_div"><%= flash[:notice] if flash[:notice]%></div>
+
+<div class="secure_pin_header_div">
+<% form_tag(:controller => controller_name, :action => action_name) do -%>
+<div id="secure_pin_div" >
+    <div class="secure_pin_text" >
+        Enter Secure Pin To View Message
+    </div>
+    <div class="secure_pin_lineb">
+    </div>
+    <div class="sign_height">
+        <div class="pin_text_div">
+            <!-- %= text_field :doctor_professional_profile, :pin_code % -->
+            <%= text_field :doctor_professional_profile, :pin1, :size => "1", :max_length => "1", :class => "pin_text_class" %>
+        </div>
+        <div class="pin_text_div">
+            <%= text_field :doctor_professional_profile, :pin2, :size => "1", :max_length => "1", :class => "pin_text_class" %>
+        </div>
+        <div class="pin_text_div">
+            <%= text_field :doctor_professional_profile, :pin3, :size => "1", :max_length => "1", :class => "pin_text_class" %>
+        </div>
+        <div class="pin_text_div">
+            <%= text_field :doctor_professional_profile, :pin4, :size => "1", :max_length => "1", :class => "pin_text_class" %>
+        </div>
+
+          <% if controller_name == "pictures" %>
+            <%=hidden_field 'picture','id', :value => picture_id %>
+          <% else %>
+            <%=hidden_field 'mail','id',:value => mail_id%>
+          <% end %>
+    </div>
+
+</div>
+
+</div>
+
+<div class="secure_pin_submit_div">
+    <%= submit_tag 'Submit' %>
+</div>
+
+<% end -%>
+

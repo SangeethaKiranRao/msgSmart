@@ -1,0 +1,22 @@
+<div class="box_text2">
+    <div class="name">
+        Name
+    </div>
+    <div class="box_text">
+        <%=@doctor.name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        E-mail ID
+    </div>
+    <div class="box_text">
+        <%=@doctor.email %>
+    </div>
+    <div>
+    	<%= link_to_remote image_tag('edit.jpg'),
+							:url => {:controller => "profile", :action => 'edit_basic_profile', :doctor_id=> @doctor.id},
+							:update => 'basic_profile',:html => {:class => 'edit_profile'} %>
+        
+    </div>
+</div>

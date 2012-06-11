@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/config/environments
+END
+development.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/config/environments/development.rb
+END
+production.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/config/environments/production.rb
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/config/environments/test.rb
+END

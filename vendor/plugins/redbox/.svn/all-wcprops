@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/redbox
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/redbox/install.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/redbox/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/redbox/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/redbox/init.rb
+END

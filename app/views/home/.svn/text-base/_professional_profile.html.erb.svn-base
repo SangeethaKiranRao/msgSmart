@@ -1,0 +1,77 @@
+<h2>Professional</h2>
+<table width="95%" cellspacing="3" cellpadding="0" border="0" align="center">
+    <tbody>
+        <tr>
+            <td height="20" width="23%" class="name1">
+                First Name:
+            </td>
+            <td width="77%" align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.first_name%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Middle Name:
+            </td>
+            <td class="name1">
+                <%=h @view_doctor.doctor_professional_profile.middle_name%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Last name:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.last_name%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Office Address:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.office_address%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                State:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.state%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Assistant Name:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.assistant_name%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Medical School:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.medical_school%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                Degree:
+            </td>
+            <td align="left" class="name1">
+                <%=h @view_doctor.doctor_professional_profile.degree%>
+            </td>
+        </tr>
+        <tr>
+            <td height="20" class="name1">
+                &nbsp;
+            </td>
+            <td align="left">
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

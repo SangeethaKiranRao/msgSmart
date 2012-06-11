@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models
+END
+picture_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/msgSmart/!svn/ver/12/trunk/msgSmart/app/models/picture_mailer.rb
+END
+speciality.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/models/speciality.rb
+END
+clickatell.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/app/models/clickatell.rb
+END
+medical_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/medical_group.rb
+END
+conversation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/conversation.rb
+END
+picture.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/app/models/picture.rb
+END
+public_contact_share.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/public_contact_share.rb
+END
+doctor_personal_profile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/app/models/doctor_personal_profile.rb
+END
+hospital_contact_share.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/hospital_contact_share.rb
+END
+doctor_speciality.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/doctor_speciality.rb
+END
+doctor_contact_info.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/models/doctor_contact_info.rb
+END
+mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/mail.rb
+END
+radbox_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/radbox_message.rb
+END
+doctor_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/app/models/doctor_mailer.rb
+END
+hospital.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/hospital.rb
+END
+doctor_medical_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/doctor_medical_group.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/app/models/message.rb
+END
+doctor_contact_share.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/doctor_contact_share.rb
+END
+quick_contact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/quick_contact.rb
+END
+doctor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/app/models/doctor.rb
+END
+nurse.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/nurse.rb
+END
+doctor_hospital.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/doctor_hospital.rb
+END
+doctor_professional_profile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/models/doctor_professional_profile.rb
+END
+doctor_observer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/models/doctor_observer.rb
+END

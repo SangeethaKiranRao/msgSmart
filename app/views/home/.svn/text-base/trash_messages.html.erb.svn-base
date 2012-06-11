@@ -1,0 +1,51 @@
+<div id="menu_options">
+    <div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px; height:350px;" class="home_box">
+        <div class="pagination" style="height:25px; float:right; margin-right:10px;">
+            <%= will_paginate @trash_messages if !@trash_messages.blank? %>
+        </div>
+        <table width="98%" cellspacing="1" cellpadding="3" border="0" align="center">
+            <tbody>
+                <tr class="name_head">
+                    <td bgcolor="#a42323" align="left">
+                        From
+                    </td>
+                    <td bgcolor="#a42323" align="left">
+                        Subject
+                    </td>
+                    <td bgcolor="#a42323" align="left">
+                        Received
+                    </td>
+                    <td bgcolor="#a42323" align="left">
+                        Move to Inbox
+                    </td>
+					<td bgcolor="#a42323" align="left">
+						Delete
+					</td>
+                </tr>
+                               <%unless @trash_messages.blank?%>
+				<%@trash_messages.each do |msg|%>
+				<%unless msg.message.recipients.empty?%>
+                <tr class="name_row">
+                    <td bgcolor="#ededed" align="left">
+                       <%=h msg.message.sender.name%>
+                    </td>
+                    <td bgcolor="#ededed" align="left">
+                        <%=link_to truncate(msg.message.subject,20,".."),{:controller => "home",:action => "message_details",:id => msg.id},{:class => "delete"}%>
+                    </td>
+                    <td bgcolor="#ededed" align="left">
+                        <%=h distance_of_time_in_words(msg.message.created_at, Time.now).sub("about","") %> ago
+                    </td>
+                    <td bgcolor="#ededed" align="left">
+                        <%=link_to "Move to Inbox",{:controller => "home",:action => "to_inbox_message",:id => msg.id},{:class => "delete"}%>
+                    </td>
+					<td bgcolor="#ededed" align="left">
+                        <%=link_to "Delete",{:controller => "home",:action => "delete_message",:id => msg.id},{:class => "delete"}%>
+                    </td>
+                </tr>
+				 <%end%>
+				<%end%>
+                      <%end%>
+            </tbody>
+        </table>
+    </div>
+</div>

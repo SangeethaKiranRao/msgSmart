@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" id="facebook">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Doctalk::Home</title>
+<%= stylesheet_link_tag 'style' %>
+<%= stylesheet_link_tag 'redbox' %>
+<%= stylesheet_link_tag 'common' %>
+<%= stylesheet_link_tag 'tabber' %>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'builder' %>
+<%= javascript_include_tag 'mail' %>
+<%= javascript_include_tag 'redbox' %>
+<%= javascript_include_tag 'tabber' %>
+
+</head>
+<body>
+<% if logged_in? %>
+<% default_values %>
+<% end %>	
+<div class="wrapper">
+		<!------------------------------headerstart-------------------------------------------->
+		<div class="header">
+        		<%=render :partial => "/home/header"%>
+        </div>
+        <!------------------------------headerend-------------------------------------------->
+        <!------------------------------bodystart-------------------------------------------->
+        <div class="middle_body">
+        	<div class="mid_1">
+        		<%if params[:controller] == "profile"%>
+        		<%=render :partial => "/profile/left_part"%>
+				<%elsif params[:controller] == "home"%>
+				<%=render :partial => "/home/left_part"%>
+				<%end%>
+            </div>
+        <div class="box2a" >
+        	<%if params[:controller] == "profile"%>
+            <div class="mid_2">
+            <%elsif params[:controller] == "home"%>
+			<div style="margin-bottom:25px;" class="mid_2">
+			<%end%>	
+            	<%=yield%>
+            </div>
+            
+            
+        <div class="mid_3" >
+        	<%if params[:controller] == "profile"%>
+            <%=render :partial => "/profile/right_part"%>
+			<%elsif params[:controller] == "home"%>
+			<%=render :partial => "/home/right_part"%>
+			<%end%>           
+        </div>
+        <%if params[:controller] == "profile"%>
+        <div style="height:20px; width:600px; float:left;"> </div>
+        <%end%>       
+        </div>
+        <!------------------------------bodyend-------------------------------------------->
+        <div class="footer">
+        
+        	<%= render :partial => "/home/footer" %>
+        </div>
+</div>
+</div>
+</body>
+</html>

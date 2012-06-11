@@ -1,0 +1,30 @@
+<div class="doc_personalpro" style="margin-left:-1px">
+    <div class="box_border1">
+        <div class="doc_professional_head">
+            <div class="left">
+                <img src="/images/hospital.jpg" />
+            </div>
+            <div class="pro_speciality">
+                &nbsp;Hospital
+            </div>
+        </div>
+    </div>
+	<%unless @doctor_hospitals.empty?%>
+    <div class="profe_text1">
+        <ul id="hospital_sort">
+            <% @doctor_hospitals.each do |hospital| %>
+            <li id="hospital_<%= hospital.id %>" class="handle">
+                <%= hospital.name %>
+                <span class="profe_right"><%= link_to image_tag('/images/cross.png', :border =>0), {:action => "delete_doctor_hospital", :doctor_id => @doctor.id, :hospital_id => hospital.id}, {:method => "delete", :confirm => "Are you sure to delete this Hospital?", :style => "text-align:right;"} %>
+                </span>
+            </li>
+            <% end %>
+        </ul>
+        <%= sortable_element("hospital_sort", :url => {:action => "sort_hospital"}) %>
+    </div>
+	<%else%>
+	<%end%>
+    <div class="redtext1a_red_right">
+        <%= link_to_remote_redbox "+ Add new Hospital", :url => {:controller => "profile", :action => "new_hospital", :doctor_id => @doctor.id} %>
+    </div>
+</div>

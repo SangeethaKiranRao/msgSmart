@@ -1,0 +1,75 @@
+<div id="menu_options">
+<div class="home_box" style="padding-top:10px; margin-bottom:10px; padding-bottom:10px; height:350px;">
+  <%=  flash[:error] if flash[:error] %>
+  <div style="width:450px; margin-left:13px;">
+	<% form_for @radbox_message, :url => nurse_radbox_messages_path(@nurse), :html => { :id => 'compose_message' } do |f| %>
+	<dl class="composer_fields clearfix">
+	    <dt id="dt_to_field" style="width:70px">
+	        <label for="to_field">
+	            <span class="name1">To*:</span>
+	        </label>
+	    </dt>
+
+	    <dd id="dd_to_field" class="field">
+	        <div tabindex="-1" id="to" class="clearfix tokenizer" style="width:398px" onclick="$('autocomplete_input').focus()">
+	            <span class="tokenizer_stretcher">^_^</span>
+	            <span class="tab_stop">
+	            	<input type="text" id="hidden_input" tabindex="-1" />
+				</span>
+				<div id="autocomplete_display" class="tokenizer_input" style="margin-top:0px">
+	                <input type="text" id="autocomplete_input" tabindex="" />
+	            </div>
+	        </div>
+	        <div id="autocomplete_populate" class="clearfix autocomplete typeahead_list" style="width:450px;height:auto;overflow-y:hidden;display:none">
+	            <div class="typeahead_message">
+	                Type the name of a friend, friend list, or email address
+					<%@doc = Doctor.doctor_data(0) %>
+
+					<%= javascript_tag "var contacts = [ #{@doc} ]" %>
+
+	            </div>
+	        </div>
+	        <script type="text/javascript">
+	            (new Image()).src = '/images/token.gif';
+	            (new Image()).src = '/images/token_selected.gif';
+	            (new Image()).src = '/images/token_hover.gif';
+	            (new Image()).src = '/images/token_x.gif';
+
+	            var typeahead = new Autocompleter.LocalAdvanced('autocomplete_input', 'autocomplete_populate', contacts, {
+	                frequency: 0.1,
+	                updateElement: addContactToList,
+	                search_field: "email"
+	            });
+	            var hidden_input = new HiddenInput('hidden_input', typeahead);
+	        </script>
+	    </dd>
+	</dl>
+	<div style="float:left;">
+	    <div style="height: 100%; float: left;">
+	        <div class="name1" style="width: 70px; padding: 5px 0px 0px 5px; float:left;margin-top: 3px;">
+	            Subject*:
+	        </div>
+	        <div style="float: left; margin-top: 5px;">
+				<%= f.text_field :subject,:value => @subject ,:class => "compsose_box" %>
+	        </div>
+	        <div style="height: 100%; float: left; width:502px">
+	            <div class="name1" style="width: 70px; padding: 5px 0px 0px 5px; float: left;">
+	                Body*:
+	            </div>
+	            <div style="float: left; margin-top: 5px;width:427px;text-align:left">
+					<%= f.text_area :body,:value => @body ,:class => "compsose_tabox" %>
+	            </div>
+	            <div style="height: 100%; float: left;">
+	                <div class="red_text" style="width: 70px; padding: 5px 0px 0px 5px; float: left;">
+	                </div>
+	                <div style="float: left; margin-top: 5px; margin-left: 8px;">
+                          <%= f.submit "Send", :type => :image, :src => "/images/send.jpg" %>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<%end %>
+  </div>
+</div>
+</div>

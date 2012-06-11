@@ -1,0 +1,65 @@
+<% @radbox_message_class = "left_tab_hover" %>
+
+<%if params[:controller] == "radbox_messages" && params[:action] == "new"%>
+  <%@compose_msg_class = "left_sub_navactive"%>
+  <%@outbox_msg_class = ""%>
+<%elsif params[:controller] == "radbox_messages" && params[:action] == "outbox"%>
+  <%@outbox_msg_class = "left_sub_navactive"%>
+  <%@compose_msg_class = ""%>
+<%end%>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td height="10">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="24%" align="left">
+                            	<%img = "/images/foto.jpg"%>
+                                <%=image_tag(img,:style => "float:left")%>
+                            </td>
+                            <td width="76%" valign="top" align="left">
+                                <span class="doc_pro1_text">Nurse</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="4"></td>
+        </tr>
+        <tr>
+            <td height="10" valign="top">
+                <a href="/radbox_messages/new">
+                        <div class="<%=  @radbox_message_class %>">
+                          <div class="left_mar">
+                            <div class="left"><img src="/images/messages_icon1.png?1336461172" alt="message" /></div>
+                            <div class="left_home_nav">RadBox</div>
+                          </div>
+                        </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+          <td valign="top">
+              <%st = @radbox_message_class == "left_tab" ? "display:none" : "display:block"%>
+              <div class="left_sub_nav" style="<%=st%>" id="dis_msg">
+                <ul>
+                  <li class="<%=@compose_msg_class%>"><%=link_to "Send",:controller => "radbox_messages",:action => "new"%></li>
+                  <li class="<%=@outbox_msg_class%>"><%=link_to "Outbox",:controller => "radbox_messages",:action => "outbox"%></li>
+                </ul>
+              </div>
+          </td>
+       </tr>
+        <tr>
+            <td height="10">
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+<div class="profile_maintxt1">Contact Settings - Check Boxes To Set Permissions</div>
+<div id="contact_info_profile">
+<%if @doctor_contact_info.new_record?%>
+<%=render :partial => "new_contact"%>
+<%else%>
+<%=render :partial => "show_contact"%>
+<%end%>
+</div>

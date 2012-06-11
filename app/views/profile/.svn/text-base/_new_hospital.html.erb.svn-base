@@ -1,0 +1,44 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>DocTalk::Choose Hospital</title>
+        <%= javascript_include_tag :defaults %>
+        <%= javascript_include_tag "main" %>
+    </head>
+    <body>
+        <div class="popup_main">
+        <div class="popup_up1">
+            <div class="pop_close">
+                <%=link_to_close_redbox(image_tag('closebtn.png')) %>
+            </div>
+        </div>
+        <div class="popup_mid1">
+            <div class="docpopup_text_1">
+                <span style="padding-left:30px;">Here you can create a new Hospital</span>
+            </div>
+			<% form_for :hospital, :url => {:controller=> "profile", :action => 'create_hospital', :doctor_id => @doctor.id} do |f| -%>
+            <%= f.error_messages %>
+			<div class="docpop_box1">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="55" class="docpopup_text_2">
+                            Name:
+                        </td>
+                        <td width="370" class="">
+                            <%= text_field_with_auto_complete :hospital, :name, {:value => "Hospital Name, Area, City", :onfocus => "clearText(this);", :onblur => "clearText(this);"}, :method => :get,:class => 'docpop_input' %>
+                        </td>
+                        <td align="left">
+                            <%= image_submit_tag("create_1.png",:onclick => 'return check_hospital();') %>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+			<% end %>
+        </div>
+        <div class="popup_down1">
+        </div>
+    </div>
+
+    </body>
+</html>

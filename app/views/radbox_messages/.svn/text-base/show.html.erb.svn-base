@@ -1,0 +1,18 @@
+<div id="menu_options">
+    <div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px; height:350px;" class="home_box">
+        <div class="inbox_detail">
+            To: <%=h @radbox_message.recipient.name %><br/>
+			From: <%=h @radbox_message.sender.name%>
+        </div>
+        <div style="width:200px; text-align:left; margin:10px 0px 10px 20px;">
+         <!--   <a class="delete" href="#"><strong>Show Details</strong></a>  -->
+        </div>
+        <div class="inbox_detail">
+            Subject: <%=h @radbox_message.subject%>
+            <br>
+            Body: <%=h @radbox_message.body%>
+            <br>
+            Received: <%= @radbox_message.created_at.to_s(:long) %>
+        </div>
+    </div>
+</div>

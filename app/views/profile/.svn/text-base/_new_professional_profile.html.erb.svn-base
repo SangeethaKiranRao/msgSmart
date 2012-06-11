@@ -1,0 +1,131 @@
+<% @paths = @edit ? {:controller=> "profile", :action => "update_professional_profile", :doctor_id => @doctor.id} : {:controller=> "profile", :action => "create_professional_profile", :doctor_id => @doctor.id} %>
+<% form_for @doctor_professional_profile, :doctor_professional_profile, :url => @paths do |f| -%>
+<%= f.error_messages %>
+<%=f.hidden_field :doctor_id,:value => @doctor.id%>
+<%=render :partial => "speciality", :locals => { :speciality_options => @speciality_options } %>
+<%=render :partial => "medical_group", :locals => { :medical_groups => @medical_groups } %>
+<%=render :partial => "hospital"%>
+<div class="hrline" style="margin-top:13px;">
+</div>
+<div class="box_text2">
+    <div class="name">
+        First Name *
+    </div>
+    <div class="nameValue2">
+       <%= f.text_field :first_name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Middle Name 
+    </div>
+    <div class="nameValue2">
+        <%= f.text_field :middle_name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Last Name *
+    </div>
+    <div class="nameValue2">
+        <%= f.text_field :last_name %>
+    </div>
+</div>
+
+<div class="box_text2">
+    <div class="name">
+       Sub Speciality *
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :sub_speciality %>
+    </div>
+    
+</div>
+<div class="box_text2">
+    <div class="name">
+        Office Address *
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :office_address %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        State *
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :state %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Zip Code *
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :zip_code %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Assistant Name
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :assistant_name %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Website Url
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :web_url %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Medical School
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :medical_school %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Graduation Year
+    </div>
+    <div class="nameValue2">
+    	<%= f.text_field :graduation_year %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Degree *
+    </div>
+    <div class="nameValue2" style="width:0px">
+    	<%= f.select :degree, DoctorProfessionalProfile::DEGREE, {:prompt=>"Select"} %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Secure Pin * 
+    </div>
+    <div class="nameValue2">
+      <%= f.text_field :secure_pin %>
+    </div>
+</div>
+<div class="box_text2">
+    <div class="name">
+        Use Secure Pin
+    </div>
+    <div class="nameValue2">
+    	<%= f.check_box :use_secure_pin %>
+    </div>
+</div>
+<div class="box_text2">
+        <div>
+        	<%img = @edit ? "update_btn.jpg" : "submit_btn.jpg"%>
+        	<%= image_submit_tag(img,:style => "float:right; margin-right:20px; margin-top:3px;") %>
+            
+        </div>
+    </div>
+<%end%>

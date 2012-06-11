@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_messageable-1.0.1/generators/messageable/templates/models
+END
+mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_messageable-1.0.1/generators/messageable/templates/models/mail.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_messageable-1.0.1/generators/messageable/templates/models/message.rb
+END
+conversation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/vendor/plugins/acts_as_messageable-1.0.1/generators/messageable/templates/models/conversation.rb
+END

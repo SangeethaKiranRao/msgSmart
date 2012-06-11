@@ -1,0 +1,110 @@
+<%if params[:controller] == "profile" && (params[:action] == "index" || params[:action] == "edit_basic_profile" || params[:action] == "update_basic_profile" || params[:action] == "create_professional_profile" || params[:action] == "edit_professional_profile" || params[:action] == "update_professional_profile" || params[:action] == "sort_speciality" || 
+     params[:action] == "new_speciality" || params[:action] == "create_speciality" || params[:action] == "delete_doctor_speciality" || params[:action] == "sort_medical" || params[:action] == "new_medical_group" || params[:action] == "create_medical_group" || params[:action] == "delete_doctor_medical" || params[:action] == "sort_hospital" || params[:action] == "new_hospital" || params[:action] == "create_hospital" || params[:action] == "delete_doctor_hospital")%>
+<%@professional = "profile_nav profile_type_active"%>
+<%@contact_info = @insurance = @personal = "profile_nav"%>
+<%elsif params[:controller] == "profile" && (params[:action] == "contact_info" || params[:action] == "create_contact_info_profile" || params[:action] == "edit_contact_info_profile" || params[:action] == "update_contact_info_profile")%>
+<%@contact_info = "profile_nav profile_type_active"%>
+<%@professional = @insurance = @personal = "profile_nav"%>
+<%elsif params[:controller] == "profile" && (params[:action] == "insurance")%>
+<%@insurance = "profile_nav profile_type_active"%>
+<%@professional = @contact_info = @personal = "profile_nav"%>
+<%elsif params[:controller] == "profile" && (params[:action] == "personal_profile" || params[:action] == "create_personal_profile" || params[:action] == "edit_personal_profile" || params[:action] == "update_personal_profile")%>
+<%@personal = "profile_nav profile_type_active"%>
+<%@professional = @insurance = @contact_info = "profile_nav"%>
+<%end%>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td height="10">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- img src="/images/profilepic.jpg" width="148" height="148" / -->
+            <img src="<%= @doc_profile_pic %>" width="148" height="148" />
+        </td>
+    </tr>
+    <tr>
+        <td height="10">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <div class="profile_line_h">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="10">
+        </td>
+    </tr>
+    <tr>
+        <td height="10" valign="top">
+            <div style="margin-left:20px;">
+                <div class="left">
+                    <img src="/images/personal.jpg" />
+                </div>
+                <div class="<%=@professional%>">
+                    <%=link_to "Professional Profile",:controller => "profile",:action => "index" ,:doctor_id => @doctor.id%>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <div class="profile_line_h">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="10" valign="top">
+            <div style="margin-left:20px;">
+                <div class="left">
+                    <img src="/images/contactinfo.jpg" />
+                </div>
+                <div class="<%=@contact_info%>">
+                    <%=link_to "Contact Info",:controller => "profile",:action => "contact_info" ,:doctor_id => @doctor.id%>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <div class="profile_line_h">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="10" valign="top">
+            <div style="margin-left:20px;">
+                <div class="left">
+                    <img src="/images/insuranceacc.jpg" />
+                </div>
+                <div class="<%=@insurance%>">
+                    <%=link_to "Insurance Accepted",:controller => "profile",:action => "insurance" ,:doctor_id => @doctor.id%>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <div class="profile_line_h">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="10" valign="top">
+            <div style="margin-left:20px;">
+                <div class="left">
+                    <img src="/images/professional.jpg" />
+                </div>
+                <div class="<%=@personal%>">
+                	<%=link_to "Personal",:controller => "profile",:action => "personal_profile" ,:doctor_id => @doctor.id%>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td height="10">
+        </td>
+    </tr>
+</table>

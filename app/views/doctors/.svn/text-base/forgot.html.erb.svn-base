@@ -1,0 +1,26 @@
+<div >
+<div style="color: #333333; float: left; font-family: Arial,Helvetica,sans-serif; font-size: 12px; float:right; margin-right:200px; margin-top:10px;"><%= flash[:notice] %></div>
+<% form_for :doctor do |f| -%>
+<div class="sign_mainbox" id="signup_div" >
+  <div class="sign_up" >
+        Forgot Password
+    </div>
+    <div class="sign_lineb">
+    </div>
+    <div class="sign_height">
+        <div class="sign_text">
+            Email Id
+        </div>
+        <div style="float:left;">
+            <%= f.text_field :email %>
+        </div>
+    </div>
+	<div class="sign_img">
+        <div>
+            <%= image_submit_tag('submit_btn_login.jpg') %>
+        </div>
+    </div>
+</div>
+
+<% end -%>
+</div>

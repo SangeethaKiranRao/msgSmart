@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/layouts
+END
+doctors.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/layouts/doctors.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/layouts/application.html.erb
+END
+messages.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/layouts/messages.html.erb
+END
+nurse.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/layouts/nurse.html.erb
+END

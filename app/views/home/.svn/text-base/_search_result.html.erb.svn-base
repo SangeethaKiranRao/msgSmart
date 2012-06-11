@@ -1,0 +1,23 @@
+<div>
+    <div class="home_box_inner_div">
+	<%doctors.each do |doctor|%>
+        <div>
+            <table width="98%" cellspacing="0" cellpadding="0" border="0" style="padding-left:20px;">
+                <tbody>
+                    <tr>
+                        <td  width="217px" class="name1">
+                          <%=doctor.doctor_professional_profile.nil? ? doctor.name : doctor.doctor_professional_profile.first_name + " " + doctor.doctor_professional_profile.middle_name + " " + doctor.doctor_professional_profile.last_name%>
+                          <%= " , " + doctor.doctor_professional_profile.degree unless doctor.doctor_professional_profile.nil? %>
+                        </td>
+                        <td>
+                          <%=link_to image_tag('add_contact_btn.jpg'), :controller => "home", :action => "add_to_quick_contact",:id => doctor.id%>
+                          <%=link_to image_tag('view_profile_btn.jpg'), :controller => "home", :action => "view_profile", :doc_id => doctor.id%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="line_home_box"></div>
+	<%end%>
+    </div>
+</div>

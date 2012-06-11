@@ -1,0 +1,156 @@
+<div style="padding-top:18px;" class="doc_personalpro">
+    <div class="bar1">
+        <div class="bar1_txt">
+            public
+        </div>
+        <div class="bar1_txt">
+            Hospital Staff
+        </div>
+        <div class="bar1_txt">
+            Doctor
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Mobile
+        </div>
+        <div class="box_text1">
+           <%=h @doctor_contact_info.mobile_number%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[mobile]",true,@doctor.doctor_contact_share.mobile )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[mobile]",true,@doctor.hospital_contact_share.mobile )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[mobile]",true,@doctor.public_contact_share.mobile )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Pager
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_contact_info.pager%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[pager]",true,@doctor.doctor_contact_share.pager )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[pager]",true,@doctor.hospital_contact_share.pager )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[pager]",true,@doctor.public_contact_share.pager )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Office No
+        </div>
+        <div class="box_text1">
+           <%=h @doctor_contact_info.office_number%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[office_number]",true,@doctor.doctor_contact_share.office_number )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[office_number]",true,@doctor.hospital_contact_share.office_number )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[office_number]",true,@doctor.public_contact_share.office_number )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Back Line No
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_contact_info.back_line_number%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[back_line_number]",true,@doctor.doctor_contact_share.back_line_number )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[back_line_number]",true,@doctor.hospital_contact_share.back_line_number )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[back_line_number]",true,@doctor.public_contact_share.back_line_number )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Assistant No
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_contact_info.assistant_number%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[assistant_number]",true,@doctor.doctor_contact_share.assistant_number )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[assistant_number]",true,@doctor.hospital_contact_share.assistant_number )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[assistant_number]",true,@doctor.public_contact_share.assistant_number )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Work Email
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_contact_info.work_email%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[work_email]",true,@doctor.doctor_contact_share.work_email )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[work_email]",true,@doctor.hospital_contact_share.work_email )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[work_email]",true,@doctor.public_contact_share.work_email )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Office Email
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_contact_info.office_email%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[office_email]",true,@doctor.doctor_contact_share.office_email )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[office_email]",true,@doctor.hospital_contact_share.office_email )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[office_email]",true,@doctor.public_contact_share.office_email )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div class="name">
+            Personal Email
+        </div>
+        <div class="box_text1">
+            <%=h @doctor_contact_info.personal_email%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:21px;">
+            <%= check_box_tag ("doctor_contact_share[personal_email]",true,@doctor.doctor_contact_share.personal_email )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:51px;">
+            <%= check_box_tag ("hospital_contact_share[personal_email]",true,@doctor.hospital_contact_share.personal_email )%>
+        </div>
+        <div style="float:left; padding:3px; margin-left:60px;">
+            <%= check_box_tag ("public_contact_share[personal_email]",true,@doctor.public_contact_share.personal_email )%>
+        </div>
+    </div>
+    <div class="box_text2">
+        <div>
+            <%= link_to_remote image_tag('edit.jpg'),
+							:url => {:controller => "profile", :action => 'edit_contact_info_profile', :doctor_id=> @doctor.id},
+							:update => 'contact_info_profile',:html => {:class => 'edit_profile'} %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div style="height:45px; border-left:#fff 1px solid;">
+    <div class="box6">
+        <div>
+            <input type="text" onfocus="this.value=''" style="float:left;" class="textbox2" value="Send Group Message" name="username">
+        </div>
+        <div style="float:right;">
+            <a href="#"><img border="0" src="/images/share.jpg"></a>
+        </div>
+    </div>
+</div>
+<div style="height:30px; padding-left:10px;">
+    <div style="float:left;">
+        <input type="radio" checked="" value="" name="button1">
+    </div>
+    <div class="profile_text2a" style="float:left; ">
+        Group1
+    </div>
+    <div style="float:left;">
+        <input type="radio" disabled="disabled" value="" name="button1">
+    </div>
+    <div class="profile_text2a" style="float:left;">
+        Group2
+    </div>
+    <div style="float:left;">
+        <input type="radio" disabled="disabled" value="" name="button1">
+    </div>
+    <div class="profile_text2a" style="float:left;">
+        All Providers
+    </div>
+</div>
+<div class="people" style="float:left; width:220px;">
+    Group Notifications
+</div>
+<div class="line_h1">
+</div>
+<div style="height:30px; width:240px; float:left;">
+    <div class="left">
+        &nbsp;&nbsp;<img src="/images/user1.jpg">
+    </div>
+    <div class="black_text1">
+        You and Dr.Vijay Ram are now friends
+        <br>
+        <span class="red_text1">16:20</span>
+    </div>
+</div>
+<div class="line_h1">
+</div>
+<div style="height:30px; width:240px; float:left;">
+    <div class="left">
+        &nbsp;&nbsp;<img height="22" width="28" src="/images/reffer.jpg">
+    </div>
+    <div class="black_text1">
+        You refered one patient to Dr. Ramesh
+        <br>
+        <span class="red_text1">16:20</span>
+    </div>
+</div>
+<div class="line_h1">
+</div>
+<div style="height:30px; width:240px; float:left;">
+    <div class="left">
+        &nbsp;&nbsp;<img height="22" width="28" src="/images/plus.jpg">
+    </div>
+    <div class="black_text1">
+        Dr.Rama has requested you to visit 
+        <br>
+        <span class="red_text1">16:20</span>
+    </div>
+</div>
+<div class="line_h1">
+</div>
+<div style="height:30px; width:240px; float:left;">
+    <div class="left">
+        &nbsp;&nbsp;<img height="22" width="28" src="/images/reffer.jpg">
+    </div>
+    <div class="black_text1">
+        You refered one patient to Dr. Ramesh
+        <br>
+        <span class="red_text1">16:20</span>
+    </div>
+</div>

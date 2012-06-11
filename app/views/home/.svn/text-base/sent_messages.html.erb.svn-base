@@ -1,0 +1,39 @@
+<div id="menu_options">
+    <div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px;" class="home_box">
+        <div class="pagination" style="height:25px; float:right; margin-right:10px;">
+            <%= will_paginate @sent_messages if !@sent_messages.blank?%>
+        </div>
+        <table width="98%" cellspacing="1" cellpadding="3" border="0" align="center">
+            <tbody>
+                <tr class="name_head">
+                    <td bgcolor="#a42323" align="left">
+                        To
+                    </td>
+                    <td bgcolor="#a42323" align="left">
+                        Subject
+                    </td>
+                    <td bgcolor="#a42323" align="left">
+                        Sent
+                    </td>
+                </tr>
+                        <%unless @sent_messages.blank?%>
+				<%@sent_messages.each do |msg|%>
+				<%unless msg.message.recipients.empty?%>
+                <tr class="name_row">
+                    <td bgcolor="#ededed" align="left">
+                        <%=h msg.message.recipients.map(&:name).to_sentence%>
+                    </td>
+                    <td bgcolor="#ededed" align="left">
+                        <%=link_to truncate(msg.message.subject,20,".."),{:controller => "home",:action => "message_details",:id => msg.id},{:class => "delete"}%>
+                    </td>
+                    <td bgcolor="#ededed" align="left">
+                        <%=h distance_of_time_in_words(msg.message.created_at, Time.now).sub("about","") %> ago
+                    </td>
+                </tr>
+				<%end%>
+				<%end%>
+                             <%end%>
+            </tbody>
+        </table>
+    </div>
+</div>

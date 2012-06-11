@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/doctor_mailer
+END
+activation.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/doctor_mailer/activation.erb
+END
+mobile_verify_code.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/doctor_mailer/mobile_verify_code.erb
+END
+reset_notification.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/doctor_mailer/reset_notification.erb
+END
+signup_notification.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/doctor_mailer/signup_notification.erb
+END
+send_secure_link.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/app/views/doctor_mailer/send_secure_link.erb
+END

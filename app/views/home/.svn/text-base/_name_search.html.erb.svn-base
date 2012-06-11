@@ -1,0 +1,14 @@
+<% form_tag(:controller => "home", :action => "medical_staff_search") do -%>
+<div id="menu_options" >
+    <div class="textbox_outer">
+        <div>
+          <input id="name_search" name="name_search" type="text" onfocus="this.value=''" style="float:left;" class="textbox1" value="<%=name_search ||= 'Please enter a name'%>" />
+        </div>
+        <div style="float:right;">
+            <%=  image_submit_tag('search_btn.jpg') %>
+        </div>
+
+        <%=hidden_field_tag "search_type", search_type %>
+    </div>
+</div>
+<% end %>

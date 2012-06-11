@@ -1,0 +1,38 @@
+    <div class="inbox">
+        <div class="redbox2">
+            <span class="redtext_1a">Inbox</span>
+        </div>
+		<%count = 1%>
+		<% form_tag( {:controller => "home", :action => "remove_message"}) do -%>
+		<%current_doctor.mailbox[:inbox].mail.each_with_index do |m,i|%>
+		<%if i< 4%>
+		<div class="inbox_row">
+            <div class="inbox_col1">
+                
+				<%=check_box_tag ("mail[message_id][]",m.id,false,{:id => "message_class_" + count.to_s})%>
+            </div>
+            <div class="inbox_col3">
+                <span class="red_text"><%=h m.message.sender.name%></span>
+                <br>
+                <%=link_to truncate(m.message.subject,15,".."),{:controller => "home",:action => "message_details",:id => m.id,:inbox => true},{:class => "gray_small_text"}%>
+                <br>
+                <span class="gray_small_text"><%=h m.message.created_at.to_s(:long) %></span>
+				
+				<span class="red_text1" style="float:right;"><%=m.read == true ? "Read" : "Unread"%></span>
+				<%count = count + 1%>
+            </div>
+        </div>
+        <div class="line1">
+        </div>
+		<%end%>
+        <%end%>
+        
+        <%=hidden_field "action","nam",:value => params[:action]%>
+        <div style="float:left; width:195px; margin-left:7px; margin-bottom:5px; text-align:left; margin-top:5px;">
+            <%=image_submit_tag('delete_txt.jpg',:class => 'delete',:onclick => "return check_msg();")%>
+        </div>
+		<%end%>
+        <div style="float:left; text-align:left; margin-top:5px;">
+            <%=link_to "More..",{:controller => "home",:action => "inbox_messages"},{:class => "delete"}%>
+        </div>
+    </div>

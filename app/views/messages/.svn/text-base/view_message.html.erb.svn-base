@@ -1,0 +1,21 @@
+<div id="menu_options">
+    <div style="padding-top:10px; margin-bottom:10px; padding-bottom:10px; height:350px;" class="home_box">
+		<div class="reply_box">
+            <%=link_to "Reply",{:controller => "home",:action => "reply_to_sender",:mail_id => @mail.id},{:class => "reply_link"}%>
+        </div>
+        <div class="inbox_detail">
+            To: <%=h @mail.message.recipients.map(&:name).to_sentence %><br/>
+			From: <%=h @mail.message.sender.name%>
+        </div>
+        <div style="width:200px; text-align:left; margin:10px 0px 10px 20px;">
+         <!--   <a class="delete" href="#"><strong>Show Details</strong></a>  -->
+        </div>
+        <div class="inbox_detail">
+            Subject: <%=h @mail.message.subject%>
+            <br />
+            Body: <%=h @mail.message.body%>
+            <br />
+            Received: <%= @mail.message.created_at.to_s(:long) %>
+        </div>
+    </div>
+</div>

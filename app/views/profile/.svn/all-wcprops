@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile
+END
+insurance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/insurance.html.erb
+END
+_edit_professional_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/msgSmart/!svn/ver/6/trunk/msgSmart/app/views/profile/_edit_professional_profile.html.erb
+END
+_show_contact.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/app/views/profile/_show_contact.html.erb
+END
+_new_hospital.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_new_hospital.html.erb
+END
+_new_professional_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/msgSmart/!svn/ver/9/trunk/msgSmart/app/views/profile/_new_professional_profile.html.erb
+END
+_basic_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_basic_profile.html.erb
+END
+_right_part.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_right_part.html.erb
+END
+personal_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/personal_profile.html.erb
+END
+_new_contact.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/views/profile/_new_contact.html.erb
+END
+_speciality.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_speciality.html.erb
+END
+_edit_basic_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_edit_basic_profile.html.erb
+END
+contact_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/contact_info.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/views/profile/index.html.erb
+END
+_edit_personal_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_edit_personal_profile.html.erb
+END
+_medical_group.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_medical_group.html.erb
+END
+_edit_contact_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/views/profile/_edit_contact_info.html.erb
+END
+_new_personal_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_new_personal_profile.html.erb
+END
+_new_speciality.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/views/profile/_new_speciality.html.erb
+END
+_left_part.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_left_part.html.erb
+END
+_hospital.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/msgSmart/!svn/ver/3/trunk/msgSmart/app/views/profile/_hospital.html.erb
+END
+_new_medical_group.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/msgSmart/!svn/ver/8/trunk/msgSmart/app/views/profile/_new_medical_group.html.erb
+END

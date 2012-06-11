@@ -1,0 +1,61 @@
+<%= flash[:info] if flash[:info] %>
+
+<div class="login_head1" >
+	<% form_tag session_path do -%>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr>
+	        <td width="10%" valign="top" style="padding-top:10px;">
+	            <a href="/"><img src="/images/doc_logo.jpg" /></a>
+	        </td>
+	        <td width="3%">
+	            &nbsp;
+	        </td>
+	        <td width="3%" align="center">
+	            &nbsp;
+	        </td>
+	        <td width="50%">
+	            &nbsp;
+	        </td>
+	        <td>
+	            <div style=" width:200px; height:90px;">
+	                <div class="email">
+	                    Email
+	                </div>
+	                <div style="padding:0 0 0 4px;">
+	                    <%= text_field_tag 'email', @email, :tabindex => "1" %>
+	                </div>
+	                <div class="box_me">
+	                    <div class="checkbox">
+	                        <%= check_box_tag 'remember_me', '1', @remember_me %>
+	                    </div>
+	                    <div class="me">
+	                        Remember me
+	                    </div>
+	                </div>
+	            </div>
+	        </td>
+	        <td width="20%">
+	            <div style=" width:200px; height:90px;">
+	                <div class="email">
+	                    Password
+	                </div>
+	                <div style="padding:0 0 0 5px;">
+	                    <%= password_field_tag 'password', nil, :tabindex => "2" %>
+	                </div>
+	                <div class="box_me">
+	                    <div class="checkbox">
+	                        &nbsp;
+	                    </div>
+	                    <div class="me">
+	                        <%= link_to "Forgot Password", :controller => "doctors", :action => "forgot" %>
+	                    </div>
+	                </div>
+	            </div>
+	        </td>
+	        <td width="15%" align="left" valign="top" style="padding-top:17px;">
+	            <%= image_submit_tag ("/images/login.jpg") %>
+	        </td>
+	    </tr>
+	</table>
+	<% end %>
+</div>

@@ -1,0 +1,52 @@
+<% @doctor.password = @doctor.password_confirmation = nil %>
+<% form_for :doctor, :url => doctors_path do |f| -%>
+<%=flash[:notice] if flash[:notice]%>
+<%=flash[:secure_info] if flash[:secure_info]%>
+<div class="sign_mainbox" id="signup_div">
+
+  <%= f.error_messages %>
+      
+	<div class="sign_up">
+        Sign Up
+    </div>
+    <div class="sign_lineb">
+    </div>
+    <div class="sign_height">
+        <div class="sign_text">
+            Full Name *
+        </div>
+        <div style="float:left;">
+            <%= f.text_field :name %>
+        </div>
+    </div>
+    <div class="sign_height">
+        <div class="sign_text">
+            Email *
+        </div>
+        <div style="float:left;">
+            <%= f.text_field :email %>
+        </div>
+    </div>
+    <div class="sign_height">
+        <div class="sign_text">
+            Password *
+        </div>
+        <div style="float:left;">
+            <%= f.password_field :password %>
+        </div>
+    </div>
+    <div class="sign_height">
+        <div class="sign_text">
+            Confirm Password *
+        </div>
+        <div style="float:left;">
+            <%= f.password_field :password_confirmation %>
+        </div>
+    </div>
+    <div class="sign_img">
+        <div>
+            <%= image_submit_tag ("/images/sign_up1.jpg") %>
+        </div>
+    </div>
+</div>
+<% end %>

@@ -1,0 +1,12 @@
+<div class="profile_maintxt1">
+    Personal
+</div>
+<div style="padding-top:18px;" class="doc_personalpro">
+<div id="personal_profile">
+	<%if @doctor_personal_profile.new_record?%>
+	<%=render :partial => "new_personal_profile"%>
+	<%else%>
+	<%=render :partial => "edit_personal_profile"%>
+	<%end%>
+</div>
+</div>

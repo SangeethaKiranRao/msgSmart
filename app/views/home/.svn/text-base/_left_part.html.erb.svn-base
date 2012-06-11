@@ -1,0 +1,189 @@
+<%if params[:controller] == "home" && ["index", "view_profile", "view_full_profile"].include?(params[:action])%>
+<%@quick_contact = "left_tab_hover"%>
+<%@medical_search = @message_class = @radbox_message_class = "left_tab"%>
+<%elsif params[:controller] == "home" && (params[:action] == "medical_staff_search")%>
+<%@medical_search = "left_tab_hover"%>
+<%@quick_contact = @message_class = @radbox_message_class = "left_tab"%>
+<%elsif params[:controller] == "home" && ["compose_message", "create", "inbox_messages", "message_details", "sent_messages", "trash_messages", "reply_to_sender", "reply_to_message", "reply_to_all", "reply_to_all_message", "forward_message", "forward_send_message", "to_trash_message", "to_inbox_message", "delete_message", "send_message_from_quick_contact"].include?(params[:action]) %>
+<%@message_class = "left_tab_hover"%>
+<%@quick_contact = @medical_search = @radbox_message_class = "left_tab"%>
+<%elsif params[:controller] == "radbox_messages" && ["inbox", "show"].include?(params[:action])%>
+<%@radbox_message_class = "left_tab_hover"%>
+<%@quick_contact = @medical_search = @message_class = "left_tab"%>
+<%end%>
+
+<%if params[:controller] == "home" && (params[:action] == "compose_message" || params[:action] == "send_message_from_quick_contact")%>
+<%@send_msg = "left_sub_navactive"%>
+<%@inbox_msg = @sent_msg = @trash_msg = ""%>
+<%elsif params[:controller] == "home" && (params[:action] == "inbox_messages" || params[:action] == "message_details" || params[:action] == "reply_to_sender" || params[:action] == "reply_to_message" || params[:action] == "reply_to_all" || params[:action] == "reply_to_all_message" || params[:action] == "forward_message" || params[:action] == "forward_send_message")%>
+<%@inbox_msg = "left_sub_navactive"%>
+<%@send_msg = @sent_msg = @trash_msg = ""%>
+<%elsif params[:controller] == "home" && (params[:action] == "sent_messages")%>
+<%@sent_msg = "left_sub_navactive"%>
+<%@inbox_msg = @send_msg = @trash_msg = ""%>
+<%elsif params[:controller] == "home" && (params[:action] == "trash_messages")%>
+<%@trash_msg = "left_sub_navactive"%>
+<%@inbox_msg = @sent_msg = @send_msg = ""%>
+<%end%>
+
+<%if params[:controller] == "home" && params[:action] == "medical_staff_search"%>
+  <% if params[:search_type] == 'A-F' %>
+    <%@search_type_1 = "left_sub_navactive"%>
+    <%@search_type_2 = @search_type_3 = @search_type_4 = @search_type_5 = @search_type_6 = @search_type_7 = @search_type_8 = ""%>
+  <% elsif params[:search_type] == 'G-K' %>
+    <%@search_type_2 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_3 = @search_type_4 = @search_type_5 = @search_type_6 = @search_type_7 = @search_type_8 = ""%>
+  <% elsif params[:search_type] == 'L-P' %>
+    <%@search_type_3 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_2 = @search_type_4 = @search_type_5 = @search_type_6 = @search_type_7 = @search_type_8 = ""%>
+  <% elsif params[:search_type] == 'Q-U' %>
+    <%@search_type_4 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_2 = @search_type_3 = @search_type_5 = @search_type_6 = @search_type_7 = @search_type_8 = ""%>
+  <% elsif params[:search_type] == 'V-Z' %>
+    <%@search_type_5 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_2 = @search_type_3 = @search_type_4 = @search_type_6 = @search_type_7 = @search_type_8 = ""%>
+  <% elsif params[:search_type] == 'medical_group' %>
+    <%@search_type_6 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_2 = @search_type_3 = @search_type_4 = @search_type_5 = @search_type_7 = @search_type_8 = ""%>
+  <% elsif params[:search_type] == 'speciality' %>
+    <%@search_type_7 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_2 = @search_type_3 = @search_type_4 = @search_type_5 = @search_type_6 = @search_type_8 = ""%>
+  <% else %>
+    <%@search_type_8 = "left_sub_navactive"%>
+    <%@search_type_1 = @search_type_2 = @search_type_3 = @search_type_4 = @search_type_5 = @search_type_6 = @search_type_7 = ""%>
+  <%end%>
+<%end%>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td height="10">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="24%" align="left">
+                            	<%img = @doctor.doctor_personal_profile.nil? ? "/images/foto.jpg" : @doctor.doctor_personal_profile.avatar.url(:small)%>
+                                <%=image_tag(img,:style => "float:left")%>
+                            </td>
+                            <td width="76%" valign="top" align="left">
+                                <span class="doc_pro1_text">Dr.<%=@doctor.doctor_professional_profile.first_name if @doctor.doctor_professional_profile %> <%=@doctor.doctor_professional_profile.last_name if @doctor.doctor_professional_profile%></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="4">
+            </td>
+        </tr>
+        <tr>
+            <td height="10" valign="top">
+                <a href="/home/index?doctor_id=<%=@doctor.id%>">
+                    <div class="<%=@quick_contact%>">
+                        <div style="margin-left:8px;">
+                            <div class="left">
+                                <img border="0" src="/images/quick_cont_icon.png">
+                            </div>
+                            <div class="left_home_nav">
+                                Quick Contacts
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+          <td height="10" valign="top">
+            <a href="/home/medical_staff_search?search_type=A-F">
+            	<div class="<%=@medical_search%>"><div class="left_mar"><div class="left"><img src="/images/medical_staff_icon.png" alt="medical staff"></div><div class="left_home_nav">Medical Staff</div></div></div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <%st_med = @medical_search == "left_tab" ? "display:none" : "display:block"%>
+            <div class="left_sub_nav" style="<%=st_med%>" id="med_staff">
+              <ul>
+                <li class="<%=@search_type_1%>"><%=link_to "A-F", :controller => "home", :action => "medical_staff_search", :search_type => "A-F" %></li>
+                <li class="<%=@search_type_2%>"><%=link_to "G-K", :controller => "home", :action => "medical_staff_search", :search_type => "G-K" %></li>
+                <li class="<%=@search_type_3%>"><%=link_to "L-P", :controller => "home", :action => "medical_staff_search", :search_type => "L-P" %></li>
+                <li class="<%=@search_type_4%>"><%=link_to "Q-U", :controller => "home", :action => "medical_staff_search", :search_type => "Q-U" %></li>
+                <li class="<%=@search_type_5%>"><%=link_to "V-Z", :controller => "home", :action => "medical_staff_search", :search_type => "V-Z" %></li>
+                <li>&nbsp;</li>
+                <li class="<%=@search_type_6%>"><%=link_to "Medical Group", :controller => "home", :action => "medical_staff_search", :search_type => "medical_group" %></li>
+                <li class="<%=@search_type_7%>"><%=link_to "Speciality", :controller => "home", :action => "medical_staff_search", :search_type => "speciality" %></li>
+                <li class="<%=@search_type_8%>"><a href="#"> Insurance <br/> <span class="left_sub_nav_small">(Coming Soon)</span></a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+            <td height="10" valign="top">
+            	<%#=link_to "Messages",:controller => "home",:action => "compose_message",:doctor_id => @doctor.id%>
+                <%#=link_to_remote message_view, :update => "menu_options", :url => {:controller => "home",:action => "compose_message",:doctor_id => @doctor.id},:complete => "$('med_staff').style.display = 'none';$('dis_msg').style.display = 'block';" %>
+                <a href="/home/compose_message?doctor_id=<%=@doctor.id%>">
+                	<div class="<%=@message_class%>"><div class="left_mar"><div class="left"><img src="/images/messages_icon1.png?1336461172" alt="message"></div><div class="left_home_nav">Messages</div><div class="msg"><%=current_doctor.mailbox[:inbox].mail_count(:unread)%></div></div></div>
+                </a>
+			</td>
+        </tr>
+		<tr>
+                            <td valign="top">
+                            	<%st = @message_class == "left_tab" ? "display:none" : "display:block"%>
+                            	<div class="left_sub_nav" style="<%=st%>" id="dis_msg">
+                            	<ul>
+                                  <li class="<%=@send_msg%>"><%=link_to "Send",:controller => "home",:action => "compose_message",:doctor_id => current_doctor.id%></li>
+                                  <li class="<%=@inbox_msg%>"><%=link_to "Inbox",:controller => "home",:action => "inbox_messages"%></li>
+                                  <li class="<%=@sent_msg%>"><%=link_to "Outbox",:controller => "home",:action => "sent_messages"%></li>
+                                  <li class="<%=@trash_msg%>"><%=link_to "Trash",:controller => "home",:action => "trash_messages"%></li>
+                                </ul>
+     							</div>
+                                </td>
+                         </tr>
+		<tr>
+            <td height="10" valign="top">
+                <a href="javascript:void(0);">
+                    <div class="left_tab">
+                        <div style="margin-left:8px;">
+                            <div class="left">
+                                <img border="0" src="/images/referrals_icon.png">
+                            </div>
+                            <div class="left_home_nav">
+                                Referrals
+                            </div>
+                            <div class="msg">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td height="10" valign="top">
+                <!-- a href="/radbox_messages/inbox?doctor_id=<%=@doctor.id%>" -->
+                    <div class="<%=@radbox_message_class%>">
+                        <div style="margin-left:8px;">
+                            <div class="left">
+                                <img border="0" src="/images/radbox_icon.png">
+                            </div>
+                            <div class="left_home_nav">
+                                RadBox
+                            </div>
+                          <div class="msg"> <%=  @doctor.unread_message_count %> </div>
+                        </div>
+                    </div>
+                <!-- /a -->
+            </td>
+        </tr>
+        <tr>
+            <td height="10">
+            </td>
+        </tr>
+    </tbody>
+</table>
+

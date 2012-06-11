@@ -1,0 +1,19 @@
+<div class="profile_maintxt1">
+    Professional Profile
+</div>
+<div class="doc_personalpro" style="padding-top:18px;">
+    <div id="basic_profile">
+       <%if !@doctor.errors.empty?%>
+               <%=render :partial => "edit_basic_profile"%>
+      <%else%>
+        <%=render :partial => "basic_profile"%>
+      <%end%>
+    </div>
+    <div id="professional_profile">
+	<%if ( (@doctor_professional_profile.new_record?) || (@edit == true) ) %>
+	<%=render :partial => "new_professional_profile", :locals => { :speciality_options => @speciality_options, :medical_groups => @medical_groups } %>
+	<%else%>
+	<%=render :partial => "edit_professional_profile"%>
+	<%end%>
+    </div>
+</div>
