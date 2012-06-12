@@ -31,9 +31,9 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  #  config.gem "paperclip", :version => "~> 2.3"
-  #  config.gem "clickatell"
-  #  config.gem "will_paginate"
+    config.gem "paperclip", :version => "~> 2.3"
+    config.gem "clickatell"
+    config.gem "will_paginate"
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -54,13 +54,13 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-require 'paperclip'
-require 'will_paginate'
-require 'clickatell'
+#require 'paperclip'
+#require 'will_paginate'
+#require 'clickatell'
 
-#ActionMailer::Base.delivery_method = :sendmail
-#ActionMailer::Base.perform_deliveries = true
-#ActionMailer::Base.raise_delivery_errors = true
-#ActionMailer::Base.default_charset = "iso-8859-1"
-#ActionMailer::Base.default_content_type = "text/html"
+ActionMailer::Base.delivery_method = :sendmail
+ActionMailer::Base.perform_deliveries = true
+ActionMailer::Base.raise_delivery_errors = true
+ActionMailer::Base.default_charset = "iso-8859-1"
+ActionMailer::Base.default_content_type = "text/html"
 
